@@ -1,1 +1,356 @@
 
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+
+        }
+        .body {
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            z-index: 1000;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .logo-container span {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-links button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            padding: 10px 15px;
+            transition: background 0.3s;
+        }
+
+        .nav-links button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: white;
+        }
+
+        .dropdown-menu {
+            display: none;
+            flex-direction: column;
+            background-color: #444;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            border-radius: 5px;
+            overflow: hidden;
+            width: 200px;
+        }
+
+        .dropdown-menu button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            padding: 10px;
+            text-align: left;
+            width: 100%;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .dropdown-menu button:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        @media (max-width: 900px) {
+            .nav-links {
+                display: none;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+        }
+
+        #section1 {
+            height: 100vh; /* Make sure section takes full viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+
+        .boxes-container {
+            margin-top: 100px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0px; /* Add a small gap between boxes */
+            justify-content: center; /* Centers content horizontally */
+            align-items: stretch; /* Ensures all boxes stretch vertically */
+            width: 100%; /* Make sure it takes full width */
+            height: 100%; /* Make it fill the full height */
+            padding: 20px; /* Optional: Adds padding around the container */
+        }
+
+        .box {
+            flex: 1 1 5%; /* This will make each box take up 30% of the width, but also allow it to grow and shrink */
+            min-width: 250px; /* Prevent boxes from becoming too small */
+            height: 95%; /* Make sure the box stretches to fill the height */
+            background-color: #333;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: top;
+            align-items: left;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            padding: 20px;
+            box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+        }
+
+
+        .box input {
+            margin: 10px 0;
+            padding: 8px;
+            border-radius: 5px;
+            border: none;
+            width: 80%;
+        }
+
+        .box button {
+            padding: 10px 20px;
+            background-color: #555;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .roomsbox {
+            background-color: #555;
+            height: 100%;
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px 0px 0px 10px;
+        }
+        .roomsboxlist {
+            display: flex; /* Makes the container a flexbox */
+            justify-content: center; /* Centers content horizontally */
+            align-items: left; /* Centers content vertically */
+            position: relative; /* Positions text relative to the image */
+            gap: 2px;
+            flex-wrap: wrap; /* Ensure the items can wrap to the next line */
+        }
+
+        .roomsboxlist .room-item {
+            background-color: #555;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: left;
+            width: 100%;
+            display: flex; /* Make room item a flex container */
+            align-items: center; /* Vertically center the content */
+            gap: 5px; /* Space between the image and text */
+        }
+
+        .roomsboxlist .room-item:hover {
+            background-color: #777;
+        }
+
+        .roomsimage {
+            height: 35px; /* Set the height of the image */
+            width: 35px; /* Set the width of the image to make it a circle */
+            border-radius: 50%; /* Make the image circular */
+        }
+
+        .room-item p {
+            text-align: left; /* Align text to the left */
+            flex: 1; /* Make the text take the remaining space */
+            margin: 0; /* Remove the default margin from <p> */
+            padding-left: 10px; /* Space between the image and text */
+        }
+
+        .box2 {
+            flex: 1 1 60%;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            height: 90vh;
+        }
+
+        .chatroom {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        /* Make the contact list scrollable */
+        .box3 {
+            max-height: 300px;  /* Adjust height as needed */
+            overflow-y: auto;   /* Enable vertical scrolling if content exceeds max-height */
+            padding: 10px;
+
+        }
+
+        /* Styling for the container of users (ul) */
+        #userList {
+            list-style-type: none;  /* Remove default list bullet points */
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Styling for individual user items (li) */
+        .user-item {
+            cursor: pointer;
+            padding: 5px;
+            margin: 5px 0;  /* Space between each user item */
+            display: flex;
+            color: white;
+
+            align-items: center;
+            background-color: #333; /* Default background color */
+        }
+
+        /* Hover effect to change background only for the hovered user item */
+        .user-item:hover {
+            background-color: #444;  /* Darker background on hover */
+        }
+
+        /* Styling for the status dot */
+        .user-item span {
+            margin-left: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+
+        #callContainer {
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+        }
+
+        .call-participants {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 5px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+        }
+
+        .call-participants span {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .chatcontent {
+            flex-grow: 1;
+            padding: 10px;
+            overflow-y: auto;
+            background-color: #fafafa;
+        }
+
+        .message {
+            display: flex;
+            border-top: 1px solid #ccc;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        .message input {
+            flex-grow: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+        }
+
+        .message button {
+            padding: 8px 12px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+
+        .message button:hover {
+            background-color: #45a049;
+        }
+        .box3 {
+            flex: 1 1 5%; /* This will make each box take up 30% of the width, but also allow it to grow and shrink */
+            min-width: 250px; /* Prevent boxes from becoming too small */
+            height: 95%; /* Make sure the box stretches to fill the height */
+            background-color: #333;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: top;
+            align-items: left;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            padding: 20px;
+            box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+        }
+
+        .box button:hover {
+            background-color: #777;
+        }
+        .savebutton {
+            padding: 8px 12px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+        #usernameInput {
+            flex-grow: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+            outline: none;
+        }
