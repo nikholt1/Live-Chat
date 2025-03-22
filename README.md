@@ -1,7 +1,6 @@
 # Live-Chat
 Firebase hosted Live Chat build for website with authentication for company. 
 notes:
-- Client wanted the dashboard file entirely in an HTML file.
 - Client wanted to register users themselves, so the option for users to register unhandled remains implementable
 
 ### Firebase tools:
