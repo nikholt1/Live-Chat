@@ -6,7 +6,7 @@ Firebase hosted Live Chat build for website with authentication for company.
 ### Firebase Firestore Database structure:
 - Meeting or Help room has messages option where the message option allows for current messages.
 - The database / messages can only be deleted through the Remote Config
-- 
+  
 ![image](https://github.com/user-attachments/assets/fe9a57dc-0922-4031-a92a-3fade0057f4c)
 
 
