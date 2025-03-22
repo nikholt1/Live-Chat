@@ -28,6 +28,8 @@ later letting users register themselves.
 - Users have to option to write direct messages to each other.
 - Users have the option to choose between two default rooms [help] and [Meeting
 - Users have the option to write a message and receive messages realtime.
+
+
 ![image](https://github.com/user-attachments/assets/24ec4100-e4dc-4203-ac47-6c61ac9b5746)
 
 
